@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;800&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    z-index: 9999;
+    width: 100vw;
+    padding: .9rem 0;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+main {
+    position: relative;
+    background-color: #353;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.parallax {
+    pointer-events: none;
+    transition: .45s;
+}
+
+.bg-img {
+    position: absolute;
+    width: 2800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ovni {
+    position: absolute;
+    width: 7rem;
+    top: calc(50% - 350px);
+    left: calc(50% - 650px);
+}
+
+.cloud-1 {
+    position: absolute;
+    width: 50rem;
+    top: calc(50% - 300px);
+    left: calc(50% - 550px);
+}
+
+.cloud-2 {
+    position: absolute;
+    width: 50rem;
+    top: calc(50% - 250px);
+    left: calc(50% + 550px);
+}
+
+.spaceship {
+    position: absolute;
+    width: 25rem;
+    top: calc(50% + 100px);
+    left: calc(50% + 650px);
+}
+
+.astronaut {
+    position: absolute;
+    width: 15rem;
+    top: calc(50% + 250px);
+    left: calc(50% + 350px);
+}
+
+.meteor {
+    position: absolute;
+    width: 60rem;
+    top: calc(50% + 400px);
+    left: calc(50% - 700px);
+}
+
+.wave-haikei {
+    position: absolute;
+    width: 100vw;
+    bottom: -75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.text h2 {
+    font-weight: 100;
+    font-size: 6.5rem;
+    line-height: .88;
+}
+
+.text h1 {
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: .88;
+}
+
+#bytes {
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 1600px;
+    z-index: 20;
+}
+
+section div {
+    background-color: rgb(20, 20, 20);
+    height: 1000px;
+}
+
+@media (max-width: 1100px) {
+    .text h1 {
+        font-size: 5.8rem;
+    }
+
+    .text h2 {
+        font-size: 4.7rem;
+    }
+}
+
+@media (max-width: 725px) {
+    .text h1 {
+        font-size: 5rem;
+        line-height: 1.1;
+    }
+
+    .text h2 {
+        font-size: 4.1rem;
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 520px) {
+    .text h1 {
+        font-size: 3.3rem;
+        line-height: 1.1;
+    }
+
+    .text h2 {
+        font-size: 4.1rem;
+        line-height: 1.1;
+    }
+}
