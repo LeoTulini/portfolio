@@ -24,16 +24,24 @@ window.addEventListener("mousemove", (e) => {
     update(e.clientX);
 });
 
-// GSAP Animation
+const upElements = document.querySelectorAll('.up');
+const downElements = document.querySelectorAll('.down');
 
-let timeline = gsap.timeline();
+// Função que verifica se o elemento está visível na tela
+function isElementVisible(element) {
+  const rect = element.getBoundingClientRect();
+  const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  return (
+    rect.top <= windowHeight && rect.bottom >= 0
+  );
+}
 
-parallax_el.forEach(el => {
-  timeline.from(
-    el,
-    {
-      top: `${el.offsetHeight / 2 - el.dataset.distance}px`,
-      duration: 1,
-    }
-  )
-})
+function handleUp() {
+  upElements.forEach(element => {
+  if (isElementVisible(element)) {
+      element.classList.add('up-active');
+    } else {
+      element.classList.remove('up-active')
+  }
+  });
+}
